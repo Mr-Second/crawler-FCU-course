@@ -69,5 +69,5 @@ class FengChiaUniversityCrawler
 
 end
 
-crawler = FengChiaUniversityCrawler.new(year: 2015, term: 1)
-File.write('courses.json', JSON.pretty_generate(crawler.courses()))
+# crawler = FengChiaUniversityCrawler.new(year: 2015, term: 1)
+# File.write('courses.json', JSON.pretty_generate(crawler.courses()))
