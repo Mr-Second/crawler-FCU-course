@@ -92,7 +92,7 @@ class FengChiaUniversityCrawler
         name: data[1].split('  ')[1],    # 課程名稱
         lecturer: nil,    # 授課教師
         credits: data[3].to_i,    # 學分數(需要轉換成數字，可以用.to_i)
-        code: "#{@year + 1911}-#{@term}-#{data[0]}-?(#{course_code})?",
+        code: "#{@year + 1911}-#{@term}-#{course_code}-?(#{data[0]})?",
         # general_code: data[0],    # 選課代碼
         url: syllabus_url,    # 課程大綱之類的連結(如果有的話)
         required: nil,    # 必修或選修
@@ -142,5 +142,5 @@ class FengChiaUniversityCrawler
 
 end
 
-crawler = FengChiaUniversityCrawler.new(year: 2015, term: 1)
-File.write('courses.json', JSON.pretty_generate(crawler.courses()))
+# crawler = FengChiaUniversityCrawler.new(year: 2015, term: 1)
+# File.write('courses.json', JSON.pretty_generate(crawler.courses()))
